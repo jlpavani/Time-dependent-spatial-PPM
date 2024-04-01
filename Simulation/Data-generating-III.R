@@ -20,16 +20,16 @@ W.nb <- spdep::poly2nb(Output.MG, row.names = 1:length(Output.MG))
 adj_mat <- spdep::nb2mat(W.nb, style = "B")
 
 # Global spatial dependence
-alpha = c(0.8, 0.6)
+alpha = c(0.8, 0.8)
 
 # Spatial covariance matrix: Q(adj_mat, alpha)
-set.seed(1); Q1 <- solve(diag(apply(adj_mat, 2, sum)) - alpha[1] * adj_mat)
-set.seed(2); Q2 <- solve(diag(apply(adj_mat, 2, sum)) - alpha[2] * adj_mat)
+Q1 <- solve(diag(apply(adj_mat, 2, sum)) - alpha[1] * adj_mat)
+Q2 <- solve(diag(apply(adj_mat, 2, sum)) - alpha[2] * adj_mat)
 
 # Spatial random effects
 phi1 <- mvtnorm::rmvnorm(1, mean = rep(0, narea), sigma = Q1)
 phi2 <- mvtnorm::rmvnorm(1, mean = rep(0, narea), sigma = Q2)
-phi = c(phi1, phi2)
+phi = c(phi1, phi2); phi <- phi - mean(phi)
 
 # Cluster structure - 1 cluster
 partition = rep(1, narea)
