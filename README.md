@@ -6,7 +6,7 @@ Data and R code to support Pavani and Quintana (2025).  In this paper, we develo
 
 If you find this code helpful and use it in your work, please cite our paper:
 
-> **Pavani, J.**; Quintana, F. A.: A Bayesian multivariate model with temporal dependence on random partition of areal data. *Statistics in Medicine*, 44(3-4), e10325, 2025. [[DOI (http://dx.doi.org/10.1002/sim.10325)]
+> **Pavani, J.**; Quintana, F. A.: A Bayesian multivariate model with temporal dependence on random partition of areal data. *Statistics in Medicine*, 44(3-4), e10325, 2025. [[DOI](https://doi.org/10.1002/sim.10325)]
 
 ```bibtex
 @Article{Pavani2025,
