@@ -10,7 +10,7 @@ If you find this code helpful and use it in your work, please cite our paper:
 
 ```bibtex
 @Article{Pavani2025,
-  author  = {Pavani, Jessica and Quintana, Fernando Andrés},
+  author  = {Pavani, Jessica and Quintana, Fernando Andr{\'e}s},
   journal = {Statistics in Medicine},
   title   = {A {B}ayesian multivariate model with temporal dependence on random partition of areal data for mosquito-borne diseases},
   year    = {2025},
